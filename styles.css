@@ -1,0 +1,75 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  font-size: 0.5em;
+  z-index: 1000;
+}
+
+main {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-top: 60px;
+  /* ヘッダーの高さ分の余白を追加 */
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 0.8em;
+}
