@@ -28,6 +28,10 @@ header {
   z-index: 1000;
 }
 
+header p {
+  margin: 0 10px 0 10px;
+}
+
 main {
   padding: 20px;
   background: rgba(0, 0, 0, 0.5);
