@@ -1,0 +1,26 @@
+DirectoryIndex index.html index.htm index.shtml index.php index.cgi
+Options -Indexes
+AuthUserFile /home/uenoma/www/.htpasswd
+AuthType Basic
+AuthName "Web access"
+Require valid-user
+Satisfy any
+Order deny,allow
+
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+RewriteEngine On
+
+# 1. すでに正規の場所（gh_backend）にアクセスしている場合は、リダイレクトを無視する
+RewriteCond %{REQUEST_URI} !^/gh/gh_backend/
+
+# 2. gh/api/ 以降のパスを $1 として保持し、正しい場所へ転送する
+RewriteRule ^gh/api/(.*)$ /gh/gh_backend/public/api/$1 [L,R=301]
